@@ -1,9 +1,12 @@
-
+@Regression @smoke
 Feature: Library app login feature
   User story:
   As a user, I should be able to login with correct credentials to different accounts.And dashboard should be displayed.
 
   Accounts are: librarian, student, admin
+  #precondition for all scenarios> background
+  Background: For the scenarios in the feature file, user is expected to be on login page
+    Given user is on the library login page
 
   @librarian
   Scenario: Login as librarian

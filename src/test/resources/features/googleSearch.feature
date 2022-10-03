@@ -1,8 +1,11 @@
 Feature: Google search functionality
-  Agile story: As a user, when Iam on the Google search page
+  As a user, when im on the Google Search page
   I should be able to search whatever I want and see relevant information
 
-  Scenario: Search page title verification
-    When user is on Google search page
-    Then user should see title is Google
+  @wip
+  Scenario: Search functionality result title verification
+    Given user is on the google search page
+    Then user clicks on accept button
+    When user types apple in google search box and clicks enter
+    Then user sees apple in google title
 
