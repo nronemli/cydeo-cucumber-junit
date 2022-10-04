@@ -9,14 +9,16 @@ public class GoogleSearchPage {
 
     //create a constructor
     public GoogleSearchPage() {
-        PageFactory.initElements(Driver.getDriver(), new PageFactory());
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     //find web elements using the findBy annotation
     @FindBy(name = "q")
     public WebElement searchBox;
 
-    @FindBy(id = "L2AGLb")
+
+    //@FindBy(id = "L2AGLb")
+    @FindBy(xpath = "//button[@id='L2AGLb']/div")
     public WebElement acceptButton;
 
 }

@@ -19,7 +19,7 @@ public class GoogleStepDefinitions {
 
     @Then("user clicks on accept button")
     public void user_clicks_on_accept_button() {
-  //      googleSearchPage.acceptButton.click();
+        googleSearchPage.acceptButton.click();
     }
 
     @When("user types apple in google search box and clicks enter")
@@ -31,7 +31,27 @@ public class GoogleStepDefinitions {
     public void user_sees_apple_in_google_title() {
         String expectedTitle = "apple - Google Search";
         String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals("Title is not as expected",actualTitle,expectedTitle);
+        Assert.assertEquals("Title is not as expected",expectedTitle,actualTitle);
     }
+
+    @When("user types {string} in google search box and clicks enter")
+    public void user_types_in_google_search_box_and_clicks_enter(String string) {
+        googleSearchPage.searchBox.sendKeys(string+Keys.ENTER);
+    }
+    @Then("user sees {string} in google title")
+    public void user_sees_in_google_title(String string) {
+        String expectedTitle = string+" - Google Search";
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertEquals("Title is not as expected",expectedTitle,actualTitle);
+    }
+
+
+
+
+
+
+
+
+
 
 }
