@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features",
         glue= "com/cydeo/stepDefinitions",
         dryRun= false,
-        tags= "@scenarioOutline"
+        tags= "@wip"
 )
 
 public class CukesRunner {

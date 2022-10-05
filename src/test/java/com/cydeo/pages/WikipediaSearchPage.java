@@ -25,4 +25,7 @@ public class WikipediaSearchPage {
     @FindBy(xpath = "//div[@class='fn']")
     public WebElement imageHeader;
 
+
+
+
 }
