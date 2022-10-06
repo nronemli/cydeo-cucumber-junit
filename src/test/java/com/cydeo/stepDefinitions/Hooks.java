@@ -1,5 +1,6 @@
 package com.cydeo.stepDefinitions;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
@@ -22,6 +23,7 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
+        BrowserUtils.sleep(5);
         Driver.closeDriver();
     }
 

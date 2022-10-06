@@ -60,7 +60,6 @@ public class BrowserUtils {
     public static void verifyTitleContains(String expectedInTitle) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
     }
-
     /**
      * This method will accept a dropdown as a webElement and return all the options text in a List of String
      * @param dropdownElement
@@ -75,5 +74,22 @@ public class BrowserUtils {
         }
         return actualOptionsAsString;
     }
+    /**
+     * This method will accept a group of radio buttons as a List of WebElements,
+     * It wil loop through the List, and click to the radio button with provided attributeValue
+     * @param radioButtons
+     * @param attributeValue
+     */
+    public static void clickRadioButton(List<WebElement>radioButtons,String attributeValue){
+        for (WebElement eachButton : radioButtons) {
+            if (eachButton.getAttribute("value").equalsIgnoreCase(attributeValue)) {
+                eachButton.click();
+            }
+        }
+    }
+
+
+
+
 }
 
