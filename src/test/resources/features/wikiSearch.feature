@@ -28,8 +28,9 @@ Scenario:  Wikipedia Search Functionality Header Verification
     Then User sees "<expectedMainHeader>" in the image header
 
     Examples: search values we are going to be using in this scenario is as follows
-      | searchValue       | expectedTitle     | expectedMainHeader |
-      | Steve Jobs        | Steve Jobs        | Steve Jobs         |
-      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
-      | Bob Marley        | Bob Marley        | Bob Marley         |
-      | Lady Gaga         | Lady Gaga         | Lady Gaga          |
+      | searchValue  | expectedTitle | expectedMainHeader |
+      | Steve Jobs   | Steve Jobs    | Steve Jobs         |
+      | Bob Marley   | Bob Marley    | Bob Marley         |
+      | Lady Gaga    | Lady Gaga     | Lady Gaga          |
+      | Selim Onemli |Selim Onemli   |  Selim Onemli      |
+
