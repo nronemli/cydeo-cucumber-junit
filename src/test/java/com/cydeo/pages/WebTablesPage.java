@@ -30,10 +30,11 @@ public class WebTablesPage {
 
     /**
      * accepts two arguments and clicks login
+     *
      * @param usernameInput
      * @param passwordInput
      */
-    public void login(String usernameInput,String passwordInput){
+    public void login(String usernameInput, String passwordInput) {
         username.sendKeys(usernameInput);
         password.sendKeys(passwordInput);
         loginButton.click();
@@ -42,15 +43,12 @@ public class WebTablesPage {
     /**
      * this method will login using credentials from configuration.properties
      */
-   public void loginWithConfig(){
+    public void loginWithConfig() {
 
-       username.sendKeys(ConfigurationReader.getProperty("webTable.username"));
+        username.sendKeys(ConfigurationReader.getProperty("webTable.username"));
         password.sendKeys(ConfigurationReader.getProperty("webTable.password"));
         loginButton.click();
-   }
-
-
-
+    }
 
 
 }
