@@ -13,7 +13,7 @@ public class Hooks {
     //import from io.cucumber.java not junit
     @Before
     public void setUpScenario() {
-        System.out.println("++++++++Setting up browser using cucumber @Before");
+     //   System.out.println("++++++++Setting up browser using cucumber @Before");
     }
 
     @After
@@ -23,18 +23,18 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
-        BrowserUtils.sleep(5);
+      //  BrowserUtils.sleep(5);
         Driver.closeDriver();
     }
 
     @BeforeStep
     public void setupStep() {
-        System.out.println("-------> Applying setup using @BeforeStep");
+       // System.out.println("-------> Applying setup using @BeforeStep");
     }
 
     @AfterStep
     public void afterStep() {
-        System.out.println("-------> Applying tearDown using @AfterStep");
+       //System.out.println("-------> Applying tearDown using @AfterStep");
     }
 
 }
