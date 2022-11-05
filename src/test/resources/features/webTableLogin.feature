@@ -10,14 +10,12 @@ Feature: User should be able to login with valid credentials
     And user clicks login button
     Then user should see url contains orders
 
-
   Scenario: Positive login scenario
     When user enters username "Test" and password "Tester" and logins
     Then user should see url contains orders
 
   Scenario: User should be able to see all 12 months in
-  months
-  dropdown
+  months dropdown
     When User enters below credentials
       | username     | Test   |
       | password     | Tester |

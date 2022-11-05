@@ -32,5 +32,5 @@ Scenario:  Wikipedia Search Functionality Header Verification
       | Steve Jobs   | Steve Jobs    | Steve Jobs         |
       | Bob Marley   | Bob Marley    | Bob Marley         |
       | Lady Gaga    | Lady Gaga     | Lady Gaga          |
-      | Selim Onemli |Selim Onemli   |  Selim Onemli      |
+      | Selim Onemli | Selim Onemli  | Selim Onemli       |
 
